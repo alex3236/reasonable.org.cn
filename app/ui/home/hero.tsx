@@ -1,17 +1,6 @@
 'use client';
 
-import {useState} from 'react'
-
-const navigation = [
-    {name: 'Product', href: '#'},
-    {name: 'Features', href: '#'},
-    {name: 'Marketplace', href: '#'},
-    {name: 'Company', href: '#'},
-]
-
 export default function Hero() {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
     return (
         <section className="bg-white">
             <div className="relative isolate px-6 pt-14 lg:px-8">
