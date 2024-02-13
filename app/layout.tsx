@@ -6,11 +6,17 @@ import NavLink from "@/app/ui/navlink";
 import React from "react";
 
 export const metadata: Metadata = {
-    title: { //! fixme: not a production title
-        template: '%s | Rxxxxxxxxx',
-        default: 'XXXX | Rxxxxxxxxx',
+    title: {
+        template: '%s | Reasonable',
+        default: 'Reasonable · 禾李团队',
     },
-    description: "A website.",
+    description: "禾李，一群 Minecraft 玩家组成的团队",
+    keywords: ["禾李", "Minecraft", "Reasonable"],
+    authors: [{
+        name: 'Alex3236',
+        url: 'https://alex3236.top'
+    }],
+    generator: 'Next.js'
 };
 
 export default function RootLayout({
