@@ -12,8 +12,13 @@ const links = [
 
 export default function NavLink() {
     const pathname = usePathname();
+    const isProvided = links.find((link) => link.href === pathname);
     return (
-        <section className="w-full bg-white z-10">
+        <section className={
+            clsx(
+                isProvided && 'w-full bg-white z-10' || 'hidden'
+            )
+        }>
             <div
                 className="text-center md:w-1/2 sm:w-3/4 w-11/12 mx-auto relative flex space-x-1 rounded-xl bg-blue-900/20 p-1">
                 {links.map((link) => {
