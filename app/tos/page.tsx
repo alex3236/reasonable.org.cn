@@ -10,7 +10,7 @@ export default async function App() {
     const file = await fs.readFile(process.cwd() + '/app/editor/policy.json', 'utf8');
     // console.log(JSON.parse(file));
     return (
-        <Container>
+        <Container className="px-0">
             <Editor initialContent={JSON.parse(file)}/>
         </Container>
     );
