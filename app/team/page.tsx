@@ -50,7 +50,7 @@ export default function Team() {
     return (
         <Section className="text-center">
             <Container>
-                <p>按加入时间排序。</p>
+                <p>按加入批次排序，同批次不分先后</p>
                 <div className="mt-4 relative grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     {members.map((member, index) => <Member key={index} nick={member.nick} qq={member.qq}/>)}
                 </div>
