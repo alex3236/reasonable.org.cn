@@ -7,3 +7,7 @@
 .bn-container[data-color-scheme='dark'] {
     --bn-colors-editor-text: theme('colors.content-dark');
 }
+
+.bn-editor {
+    padding-inline: 0;
+}
