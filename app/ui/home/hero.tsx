@@ -1,8 +1,10 @@
 'use client';
 
+import Section from "@/app/ui/container";
+
 export default function Hero() {
     return (
-        <section className="bg-white">
+        <Section>
             <div className="relative isolate px-6 pt-14 lg:px-8">
                 <div
                     className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -27,11 +29,11 @@ export default function Hero() {
                     {/*    </div>*/}
                     {/*</div>*/}
                     <div className="text-center">
-                        <h1 className="text-4xl font-black tracking-tight text-gray-900 sm:text-6xl">
+                        <h1 className="text-4xl font-black tracking-tight text-title dark:text-title-dark sm:text-6xl">
                             We&apos;re <div
-                            className="inline bg-clip-text text-transparent bg-gradient-to-br from-blue-300 to-blue-800">Reasonable</div>
+                            className="inline bg-clip-text text-transparent bg-gradient-to-br from-blue-300 to-blue-800 dark:from-blue-100 dark:to-blue-400">Reasonable</div>
                         </h1>
-                        <p className="mt-6 text-lg leading-8 text-gray-600">
+                        <p className="mt-6 text-lg leading-8 text-content dark:text-content-dark">
                             禾李，一群 Minecraft 玩家组成的团队
                         </p>
                         {/*<div className="mt-10 flex items-center justify-center gap-x-6">*/}
@@ -60,6 +62,6 @@ export default function Hero() {
                     />
                 </div>
             </div>
-        </section>
+        </Section>
     )
 }

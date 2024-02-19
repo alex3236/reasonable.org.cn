@@ -1,4 +1,4 @@
-import Container from "@/app/ui/container";
+import Section, {Container} from "@/app/ui/container";
 import Image from "next/image";
 
 export const metadata = {
@@ -7,17 +7,17 @@ export const metadata = {
 
 function Member({nick, qq}: { nick: string, qq: number }) {
     return (
-        <div className="items-center space-x-1 text-left rounded-full bg-blue-900/10">
+        <div className="items-center space-x-1 text-left rounded-full bg-secondary dark:bg-secondary-dark">
             <div className="flex items-center">
                 <Image
-                    className="rounded-full"
+                    className="rounded-full dark:brightness-90"
                     src={`https://q1.qlogo.cn/g?b=qq&nk=${qq}&s=640`}
                     width={50}
                     height={50}
                     alt=""
                 />
                 <div className="mx-auto">
-                    <p className="text-lg text-black font-bold">{nick}</p>
+                    <p className="text-lg text-title dark:text-content-dark font-bold">{nick}</p>
                 </div>
             </div>
         </div>
@@ -48,11 +48,13 @@ export default function Team() {
         {nick: 'DustyCanyon', qq: 1226134493},
     ]
     return (
-        <Container className="text-center">
-            <p>按加入时间排序。</p>
-            <div className="mt-4 relative grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                {members.map((member, index) => <Member key={index} nick={member.nick} qq={member.qq}/>)}
-            </div>
-        </Container>
+        <Section className="text-center">
+            <Container>
+                <p>按加入时间排序。</p>
+                <div className="mt-4 relative grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    {members.map((member, index) => <Member key={index} nick={member.nick} qq={member.qq}/>)}
+                </div>
+            </Container>
+        </Section>
     )
 }

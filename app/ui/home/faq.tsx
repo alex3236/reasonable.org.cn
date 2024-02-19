@@ -1,14 +1,15 @@
 import {QuestionMarkCircleIcon} from "@heroicons/react/24/solid";
+import Section from "@/app/ui/container";
 
 function FAQItem({title, content}: { title: string, content: string }) {
     return (
         <div className="mb-10">
-            <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
-                <QuestionMarkCircleIcon className="flex-shrink-0 mr-2 w-6 h-6 text-gray-400 dark:text-gray-400">
+            <h3 className="flex items-center mb-4 text-lg font-medium text-title dark:text-title-dark">
+                <QuestionMarkCircleIcon className="flex-shrink-0 mr-2 w-6 h-6 text-content dark:text-content-dark/80">
                 </QuestionMarkCircleIcon>
                 {title}
             </h3>
-            <p className="text-gray-500 dark:text-gray-400">{content}</p>
+            <p className="text-content dark:text-content-dark">{content}</p>
         </div>
     )
 }
@@ -48,7 +49,7 @@ export default function FAQ() {
     const first = faqs.slice(0, middle);
     const second = faqs.slice(middle, faqs.length);
     return (
-        <section className="bg-white dark:bg-gray-900">
+        <Section>
             <div className="relative py-8 mx-auto max-w-screen-xl sm:py-16 px-16">
                 <div className="grid pt-8 text-left md:gap-16 md:grid-cols-2">
                     <div>
@@ -59,6 +60,6 @@ export default function FAQ() {
                     </div>
                 </div>
             </div>
-        </section>
+        </Section>
     )
 }

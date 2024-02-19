@@ -6,6 +6,7 @@ import "@blocknote/react/style.css";
 const theme: Theme = {
     colors: {
         editor: {
+            text: 'content',
             background: 'transparent'
         }
     },
