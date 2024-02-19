@@ -14,17 +14,21 @@ const theme: Theme = {
 }
 
 
-export default function Editor({initialContent, editable = false}: {initialContent?: any, editable?: boolean}) {    // Stores the editor's contents as HTML.
-    // const [html, setHTML] = useState<string>("");
-
-    // Creates a new editor instance.
+export default function BlockNote({initialContent, editable = false}: { initialContent?: any, editable?: boolean }) {
     const editor: BlockNoteEditor = useBlockNote({
         editable: editable,
         initialContent: initialContent,
     });
 
-    // Renders the editor instance, and its contents as HTML below.
     return (
-        <BlockNoteView editor={editor} theme={theme} />
+        // <>
+            <BlockNoteView editor={editor} theme={theme}/>
+        //     <button role="button" onClick={
+        //         () => {
+        //             console.log(JSON.stringify(editor.topLevelBlocks))
+        //         }
+        //     }>Button
+        //     </button>
+        // </>
     );
 }

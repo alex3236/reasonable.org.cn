@@ -10,7 +10,7 @@ export default function Footer() {
                     <ReasonableLogo className="inline w-12 h-12 dark:fill-title-dark"/>
                 </div>
                 <div className="my-2">
-                    <Link href="/tos">服务协议</Link> · <Link href="/privacy">隐私政策</Link>
+                    <Link href="/docs/term-of-service">服务协议</Link> · <Link href="/docs/privacy-policy">隐私政策</Link>
                 </div>
                 <span>© 2021-{currentYear} Reasonable. 保留所有权利.</span>
             </div>
