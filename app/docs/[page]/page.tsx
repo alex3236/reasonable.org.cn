@@ -9,6 +9,7 @@ const Editor = dynamic(() => import("../../ui/blocknote/editor"), {ssr: false});
 
 export default async function App({params}: { params: { page: string } }) {
     const file = await fs.readFile(process.cwd() + `/app/docs/${params.page}.json`, 'utf8').catch(err => {
+        console.log(err);
         notFound();
     });
     return (
