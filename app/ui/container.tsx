@@ -2,7 +2,7 @@ import * as React from "react";
 
 export default function Section({className = "", children}: { className?: string, children: React.ReactNode }) {
     return (
-        <section className={`bg-light dark:bg-dark ${className}`}>
+        <section className={`${className}`}>
             {children}
         </section>
     )

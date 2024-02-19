@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Footer() {
     const currentYear = new Date().getFullYear();
     return (
-        <footer className="p-4 md:p-8 lg:p-10 bg-light dark:bg-dark text-sm text-content dark:text-content-dark">
+        <footer className="p-4 md:p-8 lg:p-10 text-sm text-content dark:text-content-dark">
             <div className="mx-auto max-w-screen-xl text-center">
                 <div className="mt-6 mb-3 flex justify-center items-center">
                     <ReasonableLogo className="inline w-12 h-12 dark:fill-title-dark"/>
